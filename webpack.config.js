@@ -22,15 +22,15 @@ module.exports = {
           {
             loader: 'image-webpack-loader',
             options: {
-              disable: false
+              disable: true
             }
           },
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 8192
-            }
-          }
+        ]
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: [
+          'file-loader'
         ]
       }
     ]

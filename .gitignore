@@ -3,6 +3,8 @@
 
 dist/*.js
 dist/*.png
+dist/*.woff*
+dist/*.eot
 
 ### Intellij ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and WebStorm
