@@ -12,9 +12,9 @@ function font() {
 }
 
 function component() {
-  const element = document.createElement('div');
+  const element = document.createElement('div')
 
-  element.innerHTML = _.join(['Hello', 'webpack', '한글폰트체크'], ' ');
+  element.innerHTML = _.join(['Hello', 'webpack', '한글폰트체크'], ' ')
 
   element.classList.add('hello')
 
@@ -23,12 +23,13 @@ function component() {
 
   element.appendChild(myIcon)
 
-  return element;
+  return element
 }
 
+// load module dynamically
 import('lodash').then(__ => {
   console.log(__.join(['Import', 'module', 'at', 'runtime'], ' '))
 })
 
 document.head.appendChild(font())
-document.body.appendChild(component());
+document.body.appendChild(component())
