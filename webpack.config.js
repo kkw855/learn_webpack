@@ -1,6 +1,7 @@
 const path = require('path')
 
 module.exports = {
+  mode: 'development',
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
@@ -33,6 +34,18 @@ module.exports = {
           'file-loader'
         ]
       },
+      {
+        test: /\.(csv|tsv)$/,
+        use: [
+          'csv-loader'
+        ]
+      },
+      {
+        test: /\.xml$/,
+        use: [
+          'xml-loader'
+        ]
+      }
     ]
   }
 }

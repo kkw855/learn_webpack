@@ -2,6 +2,7 @@ import _ from 'lodash'
 import './style.css'
 import Icon from './icon.png'
 import Font from 'noto-sans-kr'
+import Data from './data.xml'
 
 function font() {
   const element = document.createElement('link')
@@ -22,6 +23,9 @@ function component() {
   myIcon.src = Icon
 
   element.appendChild(myIcon)
+
+  // TODO: XML 파일을 찾을 수 없다는 에러 발생
+  console.log(Data)
 
   return element
 }
