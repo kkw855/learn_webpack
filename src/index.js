@@ -3,6 +3,7 @@ import './style.css'
 import Icon from './icon.png'
 import Font from 'noto-sans-kr'
 import Data from './data.xml'
+import printMe from './print.js'
 
 function font() {
   const element = document.createElement('link')
@@ -30,6 +31,18 @@ function component() {
   return element
 }
 
+function button() {
+  const element = document.createElement('div')
+
+  const btn = document.createElement('button')
+  btn.innerHTML = 'Click me and check the console!'
+  btn.onclick = printMe
+
+  element.appendChild(btn)
+
+  return element
+}
+
 // load module dynamically
 import('lodash').then(__ => {
   console.log(__.join(['Import', 'module', 'at', 'runtime'], ' '))
@@ -37,3 +50,4 @@ import('lodash').then(__ => {
 
 document.head.appendChild(font())
 document.body.appendChild(component())
+document.body.appendChild(button())
