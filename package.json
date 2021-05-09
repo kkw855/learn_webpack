@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.21",
     "noto-sans-kr": "^0.1.1",
     "save-dev": "^2.0.0",
     "webpack": "^4.35.2",
